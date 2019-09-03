@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+			
+				background-image:url(img/303822.jpg);
+				background-size: cover;
+			}
+			.boss{
+				width: 600px;
+				height: 400px;
+				background-color: transparent;
+				border: 2px solid black;
+				position: absolute;
+				left: 641px;
+				top: 250px;
+			}
+			.box1{
+				width: 600px;
+				height: 25px;
+				border: 2px solid black;
+				border-left: none;
+				border-top: none;
+				
+			}
+			.input1,.input2{
+				width: 300px;
+				border-color: black;
+				margin-left: 15px;
+			}
+			.input1{
+				
+				margin-top: 20px;
+				margin-bottom: 50px;
+				
+			}
+			.input3{
+				width: 100px;
+				background-color: white;
+				border-color: black;
+				
+				position: absolute;
+				left: 180px;
+				top: 350px;
+			}
+			.input4{
+				width: 100px;
+				background-color: white;
+				border-color: black;
+				position: absolute;
+				left: 300px;
+				top: 350px;
+			}
+			.input5{
+				border: none;
+				background-color: white;
+				position: absolute;
+				top: 5px;
+				right: 10px;
+				
+			}
+			.input5:focus{
+				display: none;
+			}
+			.name{
+				position: absolute;
+				top: 230px;
+				left: 50px;
+			}
+			.psd{
+				position: absolute;
+				top: 300px;
+				left: 50px;
+			}
+			p{
+				margin-top: 1px;
+				margin-left: 15px;
+			}
+			img{
+				margin-left: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="boss">
+			<div class="box1">
+				<p>Login</p>
+			</div>
+			
+			<div></div>
+			<div>
+				<form action="doLogin.jsp" onsubmit="return dd()">
+					<img src="img/logo.png" alt="" >
+					<div class="box2">
+						<input type="reset" value="×" class="input5"/>
+					</div>
+					<div class="name">Username:<input type="text" name="username" value="" id="input1" class="input1"/></div>
+					<br />
+					<div class="psd">Password: <input type="password" name="password" value=""  id="input2" class="input2" maxlength="16"/></div>
+					<br />
+					<input type="submit" value="Login"  class="input3"/>
+					<input type="button" value="Exit"  class="input4"/>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function dd(){
+			var user=document.getElementById("input1").value;
+			var password=document.getElementById("input2").value;
+	
+			if(user==""|| user==null){
+				alert("用户不能为空！")
+				return false;
+			}
+			return true;
+		}
+	</script>
+</html>
